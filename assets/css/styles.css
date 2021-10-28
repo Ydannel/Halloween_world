@@ -331,7 +331,7 @@ button{
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
   margin: 0 .5rem;
 } 
-
+/*change the shape*/
 .swiper-pagination-bullet-active{
   width: 1.5rem;
   height: 5px;
