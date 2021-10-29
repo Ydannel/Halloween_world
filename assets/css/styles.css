@@ -12,9 +12,9 @@
   --title-color: hsl(var(--hue), 4%, 100%);
   --text-color: hsl(var(--hue), 4%, 85%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
-  --body-color: linear-gradient(90deg, hsl(104, 28%, 40%) 0%, hsl(58, 28%, 40%) 100%);
-  --container-color: linear-gradient(136deg, hsl(104, 28%, 35%) 0%, hsl(58, 28%, 35%) 100%);
-
+  --body-color: linear-gradient(to right, #000000, #e74c3c);
+  --container-color: linear-gradient(136deg, #000000 0%, #e74c3c 100%);
+  
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
   --biggest-font-size: 2rem;
@@ -425,9 +425,87 @@ button{
 
 /*=============== TRICK OR TREAT ===============*/
 
+.trick__container{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.trick__content{
+  position: relative;
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 1.5rem 0 1rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.trick__img{
+  width: 90px;
+  transition: .3s;
+}
+
+.trick__subtitle,
+.trick__price{
+  display: block;
+}
+
+.trick__subtitle{
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.trick__title,
+.trick__price{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+}
+
+.trick__button{
+  display: inline-flex;
+  padding: .5rem;
+  border-radius: .25rem .25rem .75rem .25rem;
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+}
+
+.trick__icon{
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.trick__content:hover .trick__img{
+  transform: translateY(-.5rem);
+}
+
+.trick__content:hover .trick__button{
+  right: 0;
+}
 
 /*=============== DISCOUNT ===============*/
 
+.discount__container{
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 2.5rem 0 1.5rem;
+  row-gap: .75rem;
+}
+
+.discount__data{
+  text-align: center;
+}
+
+.discount__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+}
+
+.discount__img{
+  width: 200px;
+  justify-self: center;
+}
 
 /*=============== NEW ARRIVALS ===============*/
 
